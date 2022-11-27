@@ -1,0 +1,7 @@
+controllers:
+    resource: ../src/Controller/
+    type: attribute
+
+#my_index:
+#    path: /index
+#    controller: App\Controller\myController::index
