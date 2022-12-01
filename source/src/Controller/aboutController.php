@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\AboutPage;
 use App\Entity\MainPage;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -16,9 +17,11 @@ class aboutController extends AbstractController
      */
     public function aboutPage(ManagerRegistry $doctrine): Response
     {
-        $aboutPage =$doctrine->getRepository(aboutPage::class)->find(4);
+        $aboutPage =$doctrine->getRepository(AboutPage::class)->find(1);
+        $aboutPageArray =$doctrine->getRepository(AboutPage::class)->findAll();
         return $this->render("about/aboutPage.html.twig",[
             "aboutPage"=>$aboutPage,
+            "aboutPageArray"=>$aboutPageArray,
         ]);
     }
 }

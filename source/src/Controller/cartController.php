@@ -14,13 +14,13 @@ class cartController extends AbstractController
 {
     /**
      * @return Response
-     * @Route("/cart/{id}", name="cartPage")
+     * @Route("/cart", name="cartPage")
      */
 //    public function cartPage(): Response
 //    {
 //        return $this->render("cart/cartPage.html.twig");
 //    }
-    public function create(Request $request, $id)                        // для валідаціїї передавати далі реквест
+    public function create(Request $request)                        // для валідаціїї передавати далі реквест
     {
         $post= new Product();
         $postForm=$this->createForm(postForm::class, $post);
