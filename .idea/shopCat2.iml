@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/source/vendor/laminas/laminas-code" />
+      <excludeFolder url="file://$MODULE_DIR$/source/vendor/symfony/stopwatch" />
+      <excludeFolder url="file://$MODULE_DIR$/source/vendor/symfony/doctrine-bridge" />
+      <excludeFolder url="file://$MODULE_DIR$/source/vendor/symfony/proxy-manager-bridge" />
+      <excludeFolder url="file://$MODULE_DIR$/source/vendor/doctrine/persistence" />
+      <excludeFolder url="file://$MODULE_DIR$/source/vendor/doctrine/doctrine-migrations-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/source/vendor/doctrine/instantiator" />
+      <excludeFolder url="file://$MODULE_DIR$/source/vendor/doctrine/collections" />
+      <excludeFolder url="file://$MODULE_DIR$/source/vendor/doctrine/migrations" />
+      <excludeFolder url="file://$MODULE_DIR$/source/vendor/doctrine/common" />
+      <excludeFolder url="file://$MODULE_DIR$/source/vendor/doctrine/doctrine-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/source/vendor/doctrine/sql-formatter" />
+      <excludeFolder url="file://$MODULE_DIR$/source/vendor/doctrine/deprecations" />
+      <excludeFolder url="file://$MODULE_DIR$/source/vendor/doctrine/orm" />
+      <excludeFolder url="file://$MODULE_DIR$/source/vendor/doctrine/event-manager" />
+      <excludeFolder url="file://$MODULE_DIR$/source/vendor/doctrine/dbal" />
+      <excludeFolder url="file://$MODULE_DIR$/source/vendor/doctrine/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/source/vendor/friendsofphp/proxy-manager-lts" />
+      <excludeFolder url="file://$MODULE_DIR$/source/vendor/symfony/form" />
+      <excludeFolder url="file://$MODULE_DIR$/source/vendor/symfony/options-resolver" />
+      <excludeFolder url="file://$MODULE_DIR$/source/vendor/symfony/polyfill-intl-icu" />
+      <excludeFolder url="file://$MODULE_DIR$/source/vendor/symfony/property-info" />
+      <excludeFolder url="file://$MODULE_DIR$/source/vendor/symfony/property-access" />
+      <excludeFolder url="file://$MODULE_DIR$/source/vendor/symfony/security-http" />
+      <excludeFolder url="file://$MODULE_DIR$/source/vendor/symfony/security-core" />
+      <excludeFolder url="file://$MODULE_DIR$/source/vendor/symfony/security-csrf" />
+      <excludeFolder url="file://$MODULE_DIR$/source/vendor/symfony/password-hasher" />
+      <excludeFolder url="file://$MODULE_DIR$/source/vendor/symfony/security-bundle" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

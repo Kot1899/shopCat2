@@ -1,0 +1,66 @@
+<?php
+
+namespace App\Repository;
+
+use App\Entity\ContactPage;
+use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\Persistence\ManagerRegistry;
+
+/**
+ * @extends ServiceEntityRepository<ContactPage>
+ *
+ * @method ContactPage|null find($id, $lockMode = null, $lockVersion = null)
+ * @method ContactPage|null findOneBy(array $criteria, array $orderBy = null)
+ * @method ContactPage[]    findAll()
+ * @method ContactPage[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ */
+class ContactPageRepository extends ServiceEntityRepository
+{
+    public function __construct(ManagerRegistry $registry)
+    {
+        parent::__construct($registry, ContactPage::class);
+    }
+
+    public function save(ContactPage $entity, bool $flush = false): void
+    {
+        $this->getEntityManager()->persist($entity);
+
+        if ($flush) {
+            $this->getEntityManager()->flush();
+        }
+    }
+
+    public function remove(ContactPage $entity, bool $flush = false): void
+    {
+        $this->getEntityManager()->remove($entity);
+
+        if ($flush) {
+            $this->getEntityManager()->flush();
+        }
+    }
+
+//    /**
+//     * @return ContactPage[] Returns an array of ContactPage objects
+//     */
+//    public function findByExampleField($value): array
+//    {
+//        return $this->createQueryBuilder('c')
+//            ->andWhere('c.exampleField = :val')
+//            ->setParameter('val', $value)
+//            ->orderBy('c.id', 'ASC')
+//            ->setMaxResults(10)
+//            ->getQuery()
+//            ->getResult()
+//        ;
+//    }
+
+//    public function findOneBySomeField($value): ?ContactPage
+//    {
+//        return $this->createQueryBuilder('c')
+//            ->andWhere('c.exampleField = :val')
+//            ->setParameter('val', $value)
+//            ->getQuery()
+//            ->getOneOrNullResult()
+//        ;
+//    }
+}
