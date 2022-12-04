@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+        <main class="container col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p9-4 d-flex flex-column position-static" >
+                    <strong class="d-inline-block mb-2 text-primary fontBig"> {{ productId.name }} </strong>
+                    <h3 class="mb-0">About me </h3>
+                    <p class="card-text marginb-2" > {{ productId.story }} </p>
+                    <div class="marginb-1">Age - {{ productId.age }} month</div>
+                    <p class="card-text marginb-1"> Character - {{ productId.character_cat }}  </p>
+                    <p class="card-text marginb-1"> Soldi - {{ productId.soldi }} </p>
+                    <a class="btn2 btn2-outline-primary" :href={{ path('cartPage') }}>Take me</a>
+                    <div class="col-auto d-none d-lg-block">
+                        <img id="object-position-1" src="/images/{{ productId.name }}.jpg" class="img-product" width="300" height="214">
+                    </div>
+                </div>
+            </div>
+        </main>
+{% endblock %}

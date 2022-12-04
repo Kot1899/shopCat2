@@ -23,4 +23,16 @@ class productController extends AbstractController
             "productPageArray"=>$productPageArray,
         ]);
     }
+
+    /**
+     * @return Response
+     * @Route("/product/{productId}", name="productId")
+     */
+    public function productId(ManagerRegistry $doctrine, $productId): Response
+    {
+        $productId =$doctrine->getRepository(ProductPage::class)->find($productId);
+        return $this->render("product/productId.html.twig",[
+            "productId"=>$productId,
+        ]);
+    }
 }

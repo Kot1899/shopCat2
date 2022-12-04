@@ -18,7 +18,7 @@
                             <li>Soldi     - {{ item.soldi }}</li>
                         </ul>
                         <div class="centerQ">
-                            <a class="btn btn-primary" :href="`/product/{{ item.id }}`">Detail</a>
+                            <a class="btn btn-primary" href={{ path('productId', { productId: item.id() }) }}>Detail</a>
                         </div>
                     </div>
                 </div>

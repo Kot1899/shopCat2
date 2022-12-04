@@ -17,10 +17,8 @@ class registrationForm extends AbstractType
         $builder->add('name',TextType::class);
         $builder->add('email',TextType::class);
         $builder->add('sex',TextType::class);
-        $builder->add('age',IntegerType::class
-            , [
-//            'widget'=>'single_text',
-            'label'=>'Age)',
+        $builder->add('age',IntegerType::class, [
+                'label'=>'Age)',
         ]);
         
 
