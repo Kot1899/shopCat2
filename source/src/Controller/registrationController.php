@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\MainPage;
+use App\Entity\User;
 use App\Form\registrationForm;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -31,8 +32,11 @@ class registrationController extends AbstractController
             $em->persist($registration);
             $em->flush();
             //            переход на сторінку головну після реєстрації
-            return $this->redirectToRoute('mainPage');
+            return $this->redirectToRoute('login');
         }
+        //create user
+//        $toUser=new User();
+//        $registrationToUser=$doctrine->getRepository(Registration::class)->findOneBy('login');
         return $this->render('registration/registrationPage.html.twig',[
             "registrationPage"=>$registrationPage->createView()
         ]);
