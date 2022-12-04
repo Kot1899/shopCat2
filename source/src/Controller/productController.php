@@ -16,10 +16,8 @@ class productController extends AbstractController
      */
     public function productPage(ManagerRegistry $doctrine): Response
     {
-//        $productPage =$doctrine->getRepository(ProductPage::class)->find(1);
         $productPageArray =$doctrine->getRepository(productPage::class)->findAll();
         return $this->render("product/productPage.html.twig",[
-//            "productPage"=>$productPage,
             "productPageArray"=>$productPageArray,
         ]);
     }

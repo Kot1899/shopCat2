@@ -16,34 +16,9 @@ class cartController extends AbstractController
      * @return Response
      * @Route("/cart", name="cartPage")
      */
-//    public function cartPage(): Response
-//    {
-//        return $this->render("cart/cartPage.html.twig");
-//    }
-    public function create(Request $request)                        // для валідаціїї передавати далі реквест
+    public function cartPage(): Response
     {
-        $post= new Product();
-        $postForm=$this->createForm(postForm::class, $post);
-        $postForm->handleRequest($request);                         // для валідаціїї отримати реквест
-        if( $postForm->isSubmitted() && $postForm->isValid()) {
-
-        }
-        return $this->render("cart/cartPage.html.twig",[
-            'post'=>$post,
-            'postForm'=>$postForm->createView(),
-        ]);
+        return $this->render("cart/cartPage.html.twig");
     }
 }
 
-//need add Request
-
-//if( $postFormNew->isSubmitted() && $postFormNew->isValid())
-//{
-//    $entityManager_PA = $doctrine->getManager();
-//    $entityManager_PA->persist($mypost);
-//    $entityManager_PA->flush();
-//
-//    return $this->redirectToRoute('post_showPost',[
-//        'postId'=>$mypost->getId(),
-//    ]);
-//}
